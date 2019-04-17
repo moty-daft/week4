@@ -26,11 +26,6 @@ function promiseAll(promises) {
 function promiseRace(promises) {
     // Twój kod tu
     return new Promise(async (resolve, reject) => {
-        
-        if (promises.length == 0) {
-            resolve(array_to_return);
-        }
-        
         promises.forEach(async (promise, idx) => {
             try {
                 let result = await promise;
